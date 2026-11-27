@@ -1,6 +1,8 @@
 'timescale 1ns / 1ps
 
-module tb_move_rom;
+module tb_move_rom(
+    
+);
 
     reg [4:0] id;                       //drive ROM address
     wire boost;                          //ROM data

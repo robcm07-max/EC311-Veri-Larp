@@ -8,7 +8,7 @@ module tb_stats_rom(
     wire [7:0] hp;                      //ROM data
     wire [7:0] atk, def, spd;           //ROM data
 
-    tb_move_rom DUT (.id(id), .atk(atk), .def(def), .spd(spd));
+    stats_rom DUT (.id(id), .atk(atk), .def(def), .spd(spd));
 
     integer i;
     initial begin 

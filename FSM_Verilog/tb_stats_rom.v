@@ -1,6 +1,8 @@
 'timescale 1ns / 1ps
 
-module tb_stats_rom;
+module tb_stats_rom(
+    
+);
 
     reg [2:0] id;                       //drive ROM address
     wire reg [7:0] hp;                  //ROM data

@@ -8,7 +8,7 @@ module tb_move_rom(
     wire boost;                         //ROM data
     wire [7:0] power, threshold;        //ROM data
 
-    tb_move_rom DUT (.id(id), .boost(boost), .power(power), .threshold(threshold));
+    move_rom DUT (.id(id), .boost(boost), .power(power), .threshold(threshold));
 
     integer i;
     initial begin 

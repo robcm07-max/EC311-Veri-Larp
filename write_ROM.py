@@ -1,6 +1,8 @@
 import csv
+from pathlib import Path
+path = Path("/Users/robertocolon/CODE_STUFF/EC311-Veri-Larp/csv_stuff")
 
-with open("stats.csv") as f, open("stats_rom.v", "w") as out:
+with open(path / "stats.csv") as f, open(path / "stats_rom.v", "w") as out:
     out.write("module stats_rom(input [2:0] id, output reg [8:0] hp,\n")
     out.write("                 output reg [7:0] atk, def, spd);\n")
     out.write("  always @(*) begin\n    case (id)\n")
@@ -10,7 +12,7 @@ with open("stats.csv") as f, open("stats_rom.v", "w") as out:
     out.write("      default: begin hp=0; atk=0; def=0; spd=0; end\n")
     out.write("    endcase\n  end\nendmodule\n")
 
-with open("moves.csv") as f, open("move_rom.v", "w") as out:
+with open(path / "moves.csv") as f, open(path / "move_rom.v", "w") as out:
     out.write("module move_rom(input [4:0] id, output reg boost,\n")
     out.write("                output reg [7:0] power, threshold);\n")
     out.write("  always @(*) begin\n    case (id)\n")
